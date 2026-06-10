@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  /* Blacks */
+  --bg:        #0F0F11;
+  --surface:   #18181B;
+  --border:    #27272A;
+  --border-2:  #1E1E22;
+
+  /* Gold champagne */
+  --gold:       #D4AF6A;
+  --gold-light: #EBD094;
+  --gold-dark:  #AA8649;
+
+  /* Text */
+  --white: #F5F5F0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-inter), -apple-system, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #D4AF6A 0%, #EBD094 50%, #D4AF6A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF6A, transparent);
+}
