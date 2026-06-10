@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Home, HardHat, Building2, Sparkles, MoveRight, Handshake, ArrowRight } from "lucide-react";
+import { Home, HardHat, Building2, Sparkles, MoveRight, Handshake, ArrowRight, UserRound, KeyRound } from "lucide-react";
 
 const services = [
   {
@@ -39,6 +39,20 @@ const services = [
   },
   {
     num: "06",
+    icon: UserRound,
+    title: "Dedicated Maid Service",
+    description:
+      "A full-time cleaning professional assigned exclusively to your home. Consistent presence, trusted routine — your private residence always maintained to an immaculate standard.",
+  },
+  {
+    num: "07",
+    icon: KeyRound,
+    title: "Short-Term Rental Cleaning",
+    description:
+      "Specialized turnover cleaning for Airbnb, VRBO, and vacation rental properties. Fast, reliable, and thorough between every guest — so every check-in feels like the first.",
+  },
+  {
+    num: "08",
     icon: Handshake,
     title: "Partnership Services",
     description:
@@ -76,7 +90,7 @@ export default function Services() {
                 className="group flex items-start gap-6 sm:gap-10 py-8 hover:bg-[#0e0e0e] -mx-6 px-6 sm:-mx-10 sm:px-10 lg:-mx-16 lg:px-16 transition-colors"
               >
                 {/* Number */}
-                <span className="font-display text-5xl font-bold text-[#1a1a1a] group-hover:text-[#C9A84C]/15 transition-colors leading-none select-none hidden sm:block shrink-0 w-16 text-right">
+                <span className="font-display text-5xl font-bold text-[#C9A84C] leading-none select-none hidden sm:block shrink-0 w-16 text-right transition-all duration-300" style={{ textShadow: "0 0 18px rgba(201,168,76,0.5), 0 0 40px rgba(201,168,76,0.25)" }}>
                   {s.num}
                 </span>
 

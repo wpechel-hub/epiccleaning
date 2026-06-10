@@ -8,6 +8,8 @@ const services = [
   { label: "Deep Cleaning", href: "/services" },
   { label: "Post-Construction", href: "/services" },
   { label: "Move In / Move Out", href: "/services" },
+  { label: "Dedicated Maid Service", href: "/services" },
+  { label: "Short-Term Rental Cleaning", href: "/services" },
   { label: "Partnership Services", href: "/services" },
 ];
 
@@ -17,6 +19,7 @@ const links = [
   { label: "About Us", href: "/about" },
   { label: "Gallery", href: "/gallery" },
   { label: "FAQ", href: "/faq" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 

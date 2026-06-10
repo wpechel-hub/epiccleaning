@@ -137,6 +137,8 @@ export default function Contact() {
                     <option>Deep Cleaning</option>
                     <option>Post-Construction Cleaning</option>
                     <option>Move In / Move Out Cleaning</option>
+                    <option>Dedicated Maid Service</option>
+                    <option>Short-Term Rental Cleaning</option>
                     <option>Partnership Services</option>
                   </select>
                 </div>
