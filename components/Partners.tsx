@@ -9,27 +9,41 @@ const partners = [
 
 export default function Partners() {
   return (
-    <section className="py-16 bg-[#0F0F11] border-y border-[#1E1E22]">
+    <section className="py-20 bg-[#0F0F11] border-y border-[#1E1E22]">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="flex flex-col sm:flex-row items-center gap-10 sm:gap-16">
-          <p className="text-white/20 text-xs font-semibold tracking-[0.25em] uppercase shrink-0">
-            Trusted By
+
+        <div className="text-center mb-14">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <div className="h-px w-12 bg-[#D4AF6A]" />
+            <span className="text-[#D4AF6A] text-xs font-semibold tracking-[0.3em] uppercase">
+              Trusted By
+            </span>
+            <div className="h-px w-12 bg-[#D4AF6A]" />
+          </div>
+          <p className="font-display text-3xl sm:text-4xl font-bold text-white">
+            Companies That Choose <span className="text-gold-gradient italic">Epic Cleaning.</span>
           </p>
-          <div className="h-px bg-[#1E1E22] hidden sm:block w-8 shrink-0" />
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-10 sm:gap-14">
-            {partners.map((p) => (
-              <div key={p.name} className="relative h-10 w-32 opacity-40 hover:opacity-80 transition-opacity duration-300 grayscale hover:grayscale-0">
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#1E1E22]">
+          {partners.map((p) => (
+            <div
+              key={p.name}
+              className="bg-[#0F0F11] hover:bg-[#18181B] transition-colors duration-300 flex items-center justify-center py-10 px-8 group"
+            >
+              <div className="relative w-full h-16 brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity duration-300">
                 <Image
                   src={p.src}
                   alt={p.name}
                   fill
                   className="object-contain"
-                  sizes="128px"
+                  sizes="200px"
                 />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   );
