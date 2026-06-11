@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Partners from "@/components/Partners";
 import Testimonials from "@/components/Testimonials";
 import WhyUs from "@/components/WhyUs";
 import CTABanner from "@/components/CTABanner";
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Partners />
         <Testimonials />
         <WhyUs />
         <CTABanner />
