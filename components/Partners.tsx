@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const partners = [
-  { name: "The Towers", src: "/The towers.png" },
-  { name: "Best Company", src: "/best_company-removebg-preview.png" },
-  { name: "Fireclay Studios", src: "/fireclay.png" },
-  { name: "Summit Foot & Ankle", src: "/summit_foot_ankle.png" },
+  { name: "The Towers", src: "/The towers.png", height: "h-24" },
+  { name: "Best Company", src: "/best_company-removebg-preview.png", height: "h-24" },
+  { name: "Fireclay Studios", src: "/fireclay.png", height: "h-24" },
+  { name: "Summit Foot & Ankle", src: "/summit_foot_ankle.png", height: "h-16" },
 ];
 
 export default function Partners() {
@@ -31,7 +31,7 @@ export default function Partners() {
               key={p.name}
               className="bg-[#0F0F11] hover:bg-[#18181B] transition-colors duration-300 flex items-center justify-center py-10 px-8 group"
             >
-              <div className="relative w-full h-16 brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+              <div className={`relative w-full ${p.height} brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity duration-300`}>
                 <Image
                   src={p.src}
                   alt={p.name}
