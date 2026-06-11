@@ -3,62 +3,32 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const categories = ["All", "Kitchen", "Bathroom", "Living Room", "Bedroom", "Commercial"];
+const categories = ["All", "Kitchen", "Bathroom", "Dining Room", "Storage"];
 
 const items = [
   {
-    label: "Kitchen Deep Clean",
+    label: "Kitchen",
     category: "Kitchen",
-    src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?fit=crop&w=800&h=600&q=80",
+    src: "/Kitchen.png",
     span: "col-span-2 row-span-2",
   },
   {
-    label: "Bathroom Refresh",
+    label: "Bathroom",
     category: "Bathroom",
-    src: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?fit=crop&w=800&h=600&q=80",
+    src: "/Bathroom.png",
     span: "",
   },
   {
-    label: "Modern Kitchen",
-    category: "Kitchen",
-    src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?fit=crop&w=800&h=600&q=80",
+    label: "Dining Room",
+    category: "Dining Room",
+    src: "/Dinner.png",
     span: "",
   },
   {
-    label: "Luxury Bathroom",
-    category: "Bathroom",
-    src: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?fit=crop&w=800&h=600&q=80",
-    span: "",
-  },
-  {
-    label: "Living Room",
-    category: "Living Room",
-    src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?fit=crop&w=800&h=600&q=80",
-    span: "",
-  },
-  {
-    label: "Master Bedroom",
-    category: "Bedroom",
-    src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?fit=crop&w=800&h=600&q=80",
+    label: "Cupboard",
+    category: "Storage",
+    src: "/Cupboard.png",
     span: "col-span-2",
-  },
-  {
-    label: "Office Space",
-    category: "Commercial",
-    src: "https://images.unsplash.com/photo-1497366216548-37526070297c?fit=crop&w=800&h=600&q=80",
-    span: "",
-  },
-  {
-    label: "Spotless Kitchen",
-    category: "Kitchen",
-    src: "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?fit=crop&w=800&h=600&q=80",
-    span: "",
-  },
-  {
-    label: "Clean Bedroom",
-    category: "Bedroom",
-    src: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?fit=crop&w=800&h=600&q=80",
-    span: "",
   },
 ];
 
