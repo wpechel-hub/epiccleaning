@@ -31,7 +31,7 @@ export default function Partners() {
               key={p.name}
               className="bg-[#0F0F11] hover:bg-[#18181B] transition-colors duration-300 flex items-center justify-center py-10 px-8 group"
             >
-              <div className="relative w-full h-16 brightness-0 invert opacity-50 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="relative w-full h-16 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
                 <Image
                   src={p.src}
                   alt={p.name}
