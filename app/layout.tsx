@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     "Utah's premier cleaning service delivering exceptional residential and commercial cleaning with uncompromising standards and meticulous attention to detail.",
   keywords:
     "premium cleaning service Utah, luxury cleaning, house cleaning, commercial cleaning, deep cleaning",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({

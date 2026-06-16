@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
+
+const WEB3FORMS_KEY = "9a5293b6-244a-43af-8cc8-1062db5961af";
 
 const info = [
   { icon: Phone, label: "Phone", value: "(801) 515-4003", href: "tel:8015154003" },
@@ -11,6 +13,7 @@ const info = [
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -19,9 +22,24 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `New Quote Request from ${form.name}`,
+          from_name: form.name,
+          ...form,
+        }),
+      });
+      if (res.ok) setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -156,9 +174,10 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#C9A84C] hover:bg-[#E2C07A] text-black font-bold transition-colors"
+                  disabled={loading}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#C9A84C] hover:bg-[#E2C07A] text-black font-bold transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                   <Send className="w-4 h-4" />
                 </button>
               </form>
